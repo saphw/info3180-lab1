@@ -13,7 +13,9 @@ app = Flask(__name__)
 # Routing for your application.
 # Put your routes below this comment
 '''
-
+@app.route('/')
+def home():
+    return 'My home page'
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -22,4 +24,4 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host="0.0.0.0", port=8080)
