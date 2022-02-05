@@ -26,7 +26,9 @@ def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
 
-
+"""Comments: in the instructions, where it said "run heroku master" I accidentally
+wrote "run heroku" in the terminal and it still run and it still worked.
+Also: I made changes to the text in the 404.html file just for fun"""
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8080)
